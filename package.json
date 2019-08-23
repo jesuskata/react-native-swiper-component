@@ -28,14 +28,46 @@
   },
   "eslintConfig": {
     "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true
+    },
     "extends": [
-        "./node_modules/eslint-config-airbnb/.eslintrc"
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "document": "writable"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-native"
     ],
     "rules": {
+        "no-nested-ternary": "off",
+        "arrow-parens": "off",
+        "comma-dangle": "off",
+        "function-paren-newline": "off",
+        "import/no-extraneous-dependencies": "off",
+        "max-len": [1, 120],
+        "no-param-reassign": "off",
+        "no-unused-vars": [2, {"args": "none"}],
         "no-use-before-define": "off",
+        "react/destructuring-assignment": "off",
+        "react/require-default-props": "off",
         "react/jsx-filename-extension": "off",
-        "react/prop-types": "off",
-        "comma-dangle": "off"
+        "react-native/no-unused-styles": 2,
+        "react-native/split-platform-components": 2,
+        "react-native/no-inline-styles": 2,
+        "react-native/no-raw-text": 2
     }
   },
   "jest": {

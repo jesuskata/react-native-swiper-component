@@ -1,8 +1,6 @@
 // Dependencies
 import React from 'react';
-import {
-  StyleSheet, Text, View
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Swiper from 'react-native-swiper';
 
 // eslint-disable-next-line import/prefer-default-export
